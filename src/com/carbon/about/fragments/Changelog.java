@@ -35,15 +35,15 @@ public class AboutFragments extends Fragment {
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                 Bundle savedInstanceState) {
 
-        View aboutView = inflater.inflate(R.layout.about_fragment, container, false);
+        View rootView = inflater.inflate(R.layout.changelog, container, false);
 
         TextView aboutTitle = (TextView) aboutView.findViewById(R.id.about_title);
         String version =  Utils.getCarbonVersion();
         aboutTitle.append(" Carbon ");
 
-        TextView aboutText = (TextView) aboutView.findViewById(R.id.about);
-        aboutText.setText(Utils.readRawFile(AboutActivity.appContext, R.raw.about_carbon));
+        TextView cg = (TextView) aboutView.findViewById(R.id.changelog);
+        cg.setText("Testing - 1 - 2 - 3");
 
-        return aboutView;
+        return rootView;
     }
 }

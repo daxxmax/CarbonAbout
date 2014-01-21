@@ -76,7 +76,7 @@ public class AboutActivity extends Fragment {
     public void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
 
-        //appContext = getApplicationContext();
+        appContext = getActivity().getApplicationContext();
 
         ActionBar ab = getActionBar();
         ab.setDisplayHomeAsUpEnabled(true);
@@ -223,7 +223,7 @@ public class AboutActivity extends Fragment {
         };
 
         // Remove or set it to true, if you want to use home to toggle the menu_drawer
-        mDrawerToggle.setDrawerIndicatorEnabled(false);
+        mDrawerToggle.setDrawerIndicatorEnabled(true);
 
         if (!mFromSavedInstanceState) {
             mDrawerLayout.openDrawer(mFragmentContainerView);
